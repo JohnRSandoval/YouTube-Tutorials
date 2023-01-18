@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.scrollable-box {
+  max-height: 600px; /* Adjust this value to your desired maximum height */
+  overflow-y: scroll;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-left {
+  float: left;
+  color: #000;
+  margin-top: 4px;
+}
+.input-box {
+  width: 100%; /* Make the input box take up the full width of the container */
+  border-radius: 8px;
+  margin-left: -4px;
+  height: 50px;
+}
+</style>
+
+
+<link href="prism.css" rel="stylesheet" />
+</head>
+<body>
+  
+<h2>ChatGPT</h2>
+<div class="scrollable-box">
+  <div class="container">
+    <h3>GPT</h3>
+      <p>Hello. How can I help you today?</p>
+  </div>
+  <div class="placer"></div>
+</div>
+<div class="container darker">
+    <input class="input-box"> </input>
+    <span class="time-left">Send Chat (Enter)</span>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="prism.js"></script>
+</body>
+</html>
