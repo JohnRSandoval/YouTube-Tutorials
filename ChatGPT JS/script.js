@@ -92,7 +92,7 @@ function addBotChat(text) {
     let lastPre = userText.querySelector('pre:last-child');
     lastPre.setAttribute('class', 'language-*');
     lastCode.setAttribute('class', 'language-*');
-  }else(e){
+  }catch(e){
     console.log(e);
   }
   botChat.appendChild(name);
